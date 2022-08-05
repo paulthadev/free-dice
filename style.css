@@ -147,7 +147,6 @@ footer a:hover {
   font-size: 1.7rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  margin-top: 0.38rem;
   outline: none;
   border: none;
   background-color: #dc6a98;
@@ -169,7 +168,7 @@ footer a:hover {
   color: rgb(240, 240, 240);
   border: none;
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: capitalize;
   cursor: pointer;
   font-weight: 600;
@@ -346,7 +345,7 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 654px) {
+@media screen and (max-width: 661px) {
   .player h2 {
     font-size: 2.3rem;
   }
@@ -375,21 +374,21 @@ footer a:hover {
 
   .player {
     flex: 50%;
-    padding: 4rem;
-    padding-top: 6rem;
+    padding: 2rem;
+    padding-top: 7rem;
     display: flex;
     flex-direction: column;
   }
 
   .current {
-    width: 100%;
+    /* width: 100%; */
     padding: 1rem 1rem;
-    margin-bottom: 8rem;
+    margin-bottom: 11rem;
   }
 
   .dice {
     top: 20rem;
-    height: 9rem;
+    height: 8rem;
   }
 
   .btn--new {
@@ -436,6 +435,47 @@ footer a:hover {
 
   footer {
     bottom: 0%;
-    right: 32%;
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .current {
+    width: 100%;
+  }
+  .btn {
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  .btn--new {
+    padding: 0.5rem 1.5rem;
+    top: 1rem;
+  }
+
+  .btn--roll {
+    padding: 0.5rem 2rem;
+    top: 43.5rem;
+  }
+
+  .btn--hold {
+    padding: 0.5rem 2rem;
+    top: 47.5rem;
+  }
+
+  .dice {
+    top: 22rem;
+    height: 7rem;
+  }
+
+  .show-instruction {
+    bottom: 15%;
+    padding: 3rem 3rem;
+    padding-top: 1rem;
+    width: 30rem;
+  }
+
+  .instruction-button {
+    font-size: 0.8rem;
   }
 }
