@@ -17,6 +17,9 @@ body {
   height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +27,8 @@ body {
 
 /* LAYOUT */
 main {
-  position: relative;
+  /* position: relative; */
+  position: fixed;
   width: 100rem;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
