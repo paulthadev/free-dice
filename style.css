@@ -27,8 +27,7 @@ body {
 
 /* LAYOUT */
 main {
-  /* position: relative; */
-  position: fixed;
+  position: relative;
   width: 100rem;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
@@ -465,11 +464,6 @@ footer a:hover {
   .btn--hold {
     padding: 0.5rem 2rem;
     top: 47.5rem;
-  }
-
-  .dice {
-    top: 22rem;
-    height: 7rem;
   }
 
   .show-instruction {
