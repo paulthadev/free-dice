@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LAYOUT */
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+footer {
+  position: absolute;
+  bottom: 0%;
+  right: 42.9%;
+  padding: 0.2rem;
+  color: #2f2f2f;
+  font-weight: 700;
+}
+
+footer a {
+  text-decoration: none;
+  color: #310000;
+  font-weight: 600;
+  cursor: pointer;
+}
+footer a:hover {
+  color: #6c1b1b;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+/* ELEMENTS */
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  background-color: #c7365f;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+
+.show-instruction {
+  background: #ffffffcf;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25%;
+  outline: none;
+  border: none;
+  padding: 1rem 3rem;
+  padding-bottom: 5rem;
+  border-radius: 2rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  width: 52rem;
+  z-index: 15;
+}
+
+.show-instruction p {
+  font-size: 1.5rem;
+  margin: 0.8rem;
+}
+
+.close-instruction {
+  position: relative;
+  left: 95%;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-top: 0.38rem;
+  outline: none;
+  border: none;
+  background-color: #dc6a98;
+  color: #fff;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.close-instruction:hover {
+  background-color: #55283a;
+}
+
+.instruction-button {
+  position: absolute;
+  bottom: 3%;
+  left: 15%;
+  transform: translateX(-50%);
+  color: rgb(240, 240, 240);
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.2s;
+  background-color: rgb(40, 40, 40);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 2rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.instruction-button:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.btn--new {
+  top: 4rem;
+}
+.btn--roll {
+  top: 39.3rem;
+}
+.btn--hold {
+  top: 46.1rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/* Responsive Layouts */
+@media screen and (max-width: 1024px) {
+  main {
+    width: 85rem;
+    height: 50rem;
+  }
+
+  .btn--new {
+    top: 2rem;
+  }
+
+  .btn--roll {
+    top: 38.3rem;
+  }
+
+  .btn--hold {
+    top: 43.7rem;
+  }
+
+  .show-instruction {
+    bottom: 15%;
+  }
+  footer {
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .player h2 {
+    font-size: 3rem;
+  }
+
+  main {
+    margin: 10px;
+    width: 70rem;
+    height: 45rem;
+  }
+
+  .score {
+    font-size: 8rem;
+  }
+
+  .current {
+    width: 80%;
+    padding: 1rem 1rem;
+  }
+
+  .current-score {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+  }
+
+  .btn--roll {
+    padding: 0.5rem 2rem;
+    top: 35rem;
+  }
+
+  .btn--hold {
+    padding: 0.5rem 2rem;
+    top: 40rem;
+  }
+
+  .dice {
+    top: 14rem;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 654px) {
+  .player h2 {
+    font-size: 2.3rem;
+  }
+
+  .show-instruction {
+    bottom: 5%;
+    outline: none;
+    border: none;
+    padding: 1rem 3rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  main {
+    position: relative;
+    width: 100rem;
+    height: 55rem;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .player h2 {
+    font-size: 1.8rem;
+  }
+
+  .player {
+    flex: 50%;
+    padding: 4rem;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .current {
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-bottom: 8rem;
+  }
+
+  .dice {
+    top: 20rem;
+    height: 9rem;
+  }
+
+  .btn--new {
+    padding: 0.4rem 1.5rem;
+    top: 1rem;
+  }
+
+  .btn--roll {
+    padding: 0.5rem 2rem;
+    top: 43rem;
+  }
+
+  .btn--hold {
+    padding: 0.5rem 2rem;
+    top: 48rem;
+  }
+
+  .instruction-button {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .show-instruction {
+    bottom: 25%;
+    padding: 3rem 3rem;
+    padding-top: 1rem;
+    width: 30rem;
+  }
+
+  .show-instruction p {
+    font-size: 1.35rem;
+    margin: 0.8rem;
+  }
+
+  .close-instruction {
+    position: relative;
+    left: 90%;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.38rem 1rem;
+    margin-top: 0.4rem;
+    text-align: center;
+  }
+
+  footer {
+    bottom: 0%;
+    right: 32%;
+  }
+}
