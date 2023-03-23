@@ -1,6 +1,6 @@
 # FREE DICE
 
-FREE DICE is a version of a DICE Game using **Javasript Fundamentals**, whereby two users can play!
+FREE DICE is a version of a DICE Game using **Javascript Fundamentals**, whereby two users can play!
 
 ###  [![Netlify Status](https://api.netlify.com/api/v1/badges/e59d0f82-fdc7-46fe-b6a3-7edaa67d58bd/deploy-status)](https://app.netlify.com/sites/freedice/deploys)
 #### Live Preview 👉 [Click Here](https://freedice.netlify.app/)
