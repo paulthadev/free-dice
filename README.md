@@ -1,28 +1,28 @@
 # DICE GAME
 
-Creating Dynamic Elements can be fun until you get caught in the web of the bubble effect 😂
-
-At some point I was in that web, but now I understand more about Javascript Fundamentals.
-
 A version of a DICE GAME using **Javasript Fundamentals.**
 
-## - Basic Areas with JavaScript Fundamentals includes:
+Creating Dynamic Elements can be fun until you get caught in the web of the bubble effect 😂
+At some point I was in that web, but now I understand more about Javascript Fundamentals.
+###  [![Netlify Status](https://api.netlify.com/api/v1/badges/e59d0f82-fdc7-46fe-b6a3-7edaa67d58bd/deploy-status)](https://app.netlify.com/sites/freedice/deploys)
+#### Live Preview 👉 [Click Here](https://freedice.netlify.app/)
 
-### _- FUNCTION EXPRESSIONS_
+### - Basic Areas with JavaScript Fundamentals includes:
 
-### _- DOM MANIPULATION_
+- FUNCTION EXPRESSIONS
 
-### _- HANDLING CLICK EVENTS_
+- DOM MANIPULATION
 
-### _- MANIPULATING CSS STYLES_
+- HANDLING CLICK EVENTS
 
-### _- CODE REFACTORING (DRY: DO NOT REPEAT YOURSELF PRINCIPLE)_
+- MANIPULATING CSS STYLES
 
-### _- SIMPLE DATA STRUCTURE (ARRAYS)_
+- CODE REFACTORING (DRY: DO NOT REPEAT YOURSELF PRINCIPLE)
 
-### _- STRING LITERALS, IF/ELSE STATEMENTS_
+- SIMPLE DATA STRUCTURE (ARRAYS)
+
+- STRING LITERALS, IF/ELSE STATEMENTS
 
 - Listen to Keyboard event on the close Instruction pop-up **(by pressing the 'Escape button')**
-- Use Javascript to add Logics
 
-### Live demo >> https://fadayopaul.github.io/dice-game/
+- Use Javascript to add Logics
